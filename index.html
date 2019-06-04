@@ -12,10 +12,16 @@
         <div class="star pink"></div>
         <!-- <div class="star blue"></div> -->
         <div id="main">
-            <h2 class="title1">this is</h2>
-            <h3 class="title2">some code</h3>
+            <div class="title1box">
+                <h2 class="title1">this is</h2>
+            </div>
+            <div class="title2box">
+                <h3 class="title2">some code</h3>
+            </div>
             <div class="_"></div>
-            <a class="link" href="https://www.jianshu.com/u/8c896c3fadb8">简书</a>  <a class="link" href="https://github.com/rr13k">GIT</a>
+            <div class="linkBox">
+                <a class="link" href="https://www.jianshu.com/u/8c896c3fadb8">简书</a>  <a class="link" href="https://github.com/rr13k">GIT</a>
+            </div>
         </div>
         <h1 class="title3" >STORY</h1>
 </body>
@@ -33,6 +39,10 @@
         user-select: none;
     }
 
+    .link:hover{
+        color: #b7b7b7;
+    }
+
     .link{
         text-decoration:none; 
         color: white;
@@ -40,6 +50,30 @@
         cursor:pointer;
         padding-right: 100px;
     }
+
+    .linkBox{
+        position: relative;
+        animation:zoom 3s 1;
+        animation-timing-function:ease;
+        -webkit-animation:zoom 3s 1; /*Safari and Chrome*/
+        -webkit-animation-timing-function:ease;
+    }
+
+
+    @keyframes zoom
+{
+	0% {transform:scale(0,0);}
+    30% {transform:scale(0,0);}
+	100% {transform:scale(1,1);}
+}
+
+@-webkit-keyframes zoom /*Safari and Chrome*/
+{
+    0% {transform:scale(0,0);}
+    30% {transform:scale(0,0);}
+	100% {transform:scale(1,1);}
+}
+
 
     #main{
         position: fixed;
@@ -52,6 +86,50 @@
         margin: 0;
         color: wheat;
     }
+
+    .title1box{
+        position: relative;
+        animation:mymove 2s 1;
+        animation-timing-function:ease;
+        -webkit-animation:mymove 2s 1; /*Safari and Chrome*/
+        -webkit-animation-timing-function:ease;
+    }
+
+    .title2box{
+        position: relative;
+        animation:mymove2 3s 1;
+        animation-timing-function:ease;
+        -webkit-animation:mymove2 3s 1; /*Safari and Chrome*/
+        -webkit-animation-timing-function:ease;
+    }
+
+    @keyframes mymove2
+{
+	0% {opacity: 0;}
+    30% {opacity: 0;}
+	100% {opacity:1;}
+}
+
+@-webkit-keyframes mymove2 /*Safari and Chrome*/
+{
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+	100% {opacity:1;}
+}
+
+
+    @keyframes mymove
+{
+	from {left:-400px;}
+	to {left:0px;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+	from {left:-400px;}
+	to {left:0px;}
+}
+
     .title2{
         font-size: 38px;
         margin: 0;
@@ -69,7 +147,23 @@
         -moz-transform:rotate(90deg); 	/* Firefox */
         -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
         -o-transform:rotate(90deg); 	/* Opera */
+        animation:_hide 5s 1;
+        animation-timing-function:ease;
+        -webkit-animation:_hide 5s 1; /*Safari and Chrome*/
+        -webkit-animation-timing-function:ease;
     }
+
+    @keyframes _hide
+{
+	from {color:black;opacity: 0;}
+	to {color:wheat;opacity: 1;}
+}
+
+@-webkit-keyframes _hide /*Safari and Chrome*/
+{
+    from {color:black;opacity: 0;}
+	to {color:wheat;opacity: 1;}
+}
 
     body{
         background-color: #101010;
