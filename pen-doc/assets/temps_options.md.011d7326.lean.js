@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.12811cf7.js";const A=JSON.parse('{"title":"配置文件","description":"","frontmatter":{},"headers":[],"relativePath":"temps/options.md"}'),p={name:"temps/options.md"},o=l("",5),e=[o];function t(c,r,y,D,i,F){return n(),a("div",null,e)}const d=s(p,[["render",t]]);export{A as __pageData,d as default};
